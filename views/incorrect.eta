@@ -1,0 +1,13 @@
+<% layout("./layouts/layout.eta", { user: it.user}) %>
+</br>
+</br>
+<h3>Incorrect!</h3>
+
+<% if (it.answer && it.answer.length > 0) { %>
+  <p>The correct answer is: <%= it.option_text %></p>
+  <% } else { %> 
+    <p>This question has no correct answer</p>
+  <% } %>
+
+
+<p><a href="/quiz">Next question</a><p>

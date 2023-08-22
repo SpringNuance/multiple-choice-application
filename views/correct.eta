@@ -1,0 +1,5 @@
+<% layout("./layouts/layout.eta", { user: it.user}) %>
+</br>
+</br>
+<h3>Correct!</h3>
+<p><a href="/quiz">Next question</a><p>

@@ -1,0 +1,12 @@
+<% layout("./layouts/layout.eta") %>
+
+</br>
+</br>
+</br>
+<h4> ***********************************************<h4>
+<h4>     Multiple choice question app from developer Nuance!  </h4>
+<h4>  If you want to see the questions, you need to log in <a href="/questions">here </a></h4>
+<h4> ***********************************************<h4>
+<h4> <a href="/auth/login">Login Here</a><br/></h4>
+<h4> <a href="/auth/register">Register Here</a><br/></h4>
+

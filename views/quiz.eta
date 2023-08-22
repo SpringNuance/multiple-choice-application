@@ -1,0 +1,34 @@
+<% layout("./layouts/layout.eta", { user: it.user}) %>
+</br>
+</br>
+<h3>Test your knowledge with quizzes! </h3>
+
+<% if (it.question.length > 0) { %>
+
+<h4>Title: <%= it.title %></h4>
+<p>Question: <%= it.question_text %></p>
+
+<% if (it.answers && it.answers.length > 0) { %>
+
+<ul>
+<% it.answers.forEach(answer => { %>
+  <li>
+    <form method="POST" action="/quiz/<%= it.question_id %>/options/<%= answer.id %>">
+      <input type="submit" value="Choose" style="display: inline;"/> <%= answer.option_text %> 
+    </form>
+  </li>
+<% }); %>
+</ul>
+
+  <% } else { %> 
+    <p>No answers available for this question!</p>
+    <p><a href="/quiz">Next question</a><p>
+  <% } %>
+
+
+<% } else { %>
+  
+  <p>There have not been any questions created! You can contribute by creating a question</p>
+  <p>Create question <a href="/questions">here</a><p>
+<% } %>
+
